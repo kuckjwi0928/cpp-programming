@@ -51,7 +51,7 @@ int main(void)
 void ShowMenu()
 {
     cout<<"1. 계좌개설"<<endl;
-    cout<<"2. 입급"<<endl;
+    cout<<"2. 입금"<<endl;
     cout<<"3. 출금"<<endl;
     cout<<"4. 계좌정보 전체 출력"<<endl;
     cout<<"5. 종료"<<endl;
@@ -106,7 +106,7 @@ void DepositMoney()
     Account acc = accMap.find(id)->second;
     acc.balance = acc.balance += money;
     accMap.find(id)->second = acc;
-    cout<<"입급 완료"<<endl;
+    cout<<"입금 완료"<<endl;
 }
 
 void WithdrawMoney()
@@ -135,7 +135,7 @@ void WithdrawMoney()
 
     acc.balance = acc.balance -= money;
     accMap.find(id)->second = acc;
-    cout<<"입급 완료"<<endl;
+    cout<<"입금 완료"<<endl;
 }
 
 void ShowAllAccount()

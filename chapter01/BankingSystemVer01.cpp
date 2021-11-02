@@ -118,7 +118,7 @@ void WithdrawMoney()
     cout<<"계좌ID: ";
     cin>>id;
 
-    if (!accMap.count(id)) {
+    if (!accMap.contains(id)) {
         cout<<"존재하지 않는 계좌 입니다."<<endl;
         return;
     }

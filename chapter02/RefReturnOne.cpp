@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int& RefRetFuncOne(int &ref)
+int RefRetFuncOne(int &ref)
 {
     ref++;
     return ref;
@@ -10,7 +10,7 @@ int& RefRetFuncOne(int &ref)
 int main(void)
 {
     int num1 = 1;
-    int &num2 = RefRetFuncOne(num1);
+    int num2 = RefRetFuncOne(num1);
 
     num1++;
     num2++;

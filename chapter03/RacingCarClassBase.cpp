@@ -1,4 +1,5 @@
-#include<iostream>
+#include "Car.h"
+#include <iostream>
 
 using namespace std;
 
@@ -6,24 +7,29 @@ namespace CAR_CONST
 {
     enum
     {
-        ID_LEN = 20,
-        MAX_SPD = 200,
-        FUEL_STEP = 2,
-        ACC_STEP = 10,
-        BRK_STEP = 10
+        ID_LEN = 20, MAX_SPD = 200, FUEL_STEP = 2, ACC_STEP = 10, BRK_STEP = 10
     };
-};
+}
 
-struct Car
+class Car
 {
-    char gamerID[CAR_CONST::ID_LEN];
-    int fuelGauge;
-    int curSpeed;
-
-    void ShowCarState();
-    void Accel();
-    void Break();
+    private:
+        string gamerID;
+        int fuelGauge;
+        int curSpeed;
+    public:
+        void InintMemebers(string ID, int fuel);
+        void ShowCarState();
+        void Accel();
+        void Break();  
 };
+
+void Car::InintMemebers(string ID, int fuel)
+{
+    gamerID = ID;
+    fuelGauge = fuel;
+    curSpeed = 0;
+}
 
 void Car::ShowCarState()
 {
@@ -57,10 +63,10 @@ void Car::Break()
     curSpeed -= CAR_CONST::BRK_STEP;
 }
 
-
 int main(void)
 {
-    Car run99 = {"run99", 100, 0};
+    Car run99;
+    run99.InintMemebers("run99", 100);
     run99.Accel();
     run99.Accel();
     run99.ShowCarState();

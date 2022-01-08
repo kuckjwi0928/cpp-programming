@@ -3,3 +3,4 @@ project(cpp_programing)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Desturctor chapter04/desturcture/Desturctor.cpp)
+add_executable(NameCard chapter04/exercise-04-3/NameCard.cpp)

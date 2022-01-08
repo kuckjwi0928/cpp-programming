@@ -1,5 +1,2 @@
-*
-!/**/
-!*.cpp
-!*.h
-!.gitignore
+.idea
+cmake-build-debug

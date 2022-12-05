@@ -46,3 +46,4 @@ add_executable(PointerOperatorOverloading chapter11/PointerOperatorOverloading.c
 add_executable(Functor chapter11/Functor.cpp)
 add_executable(ConvToObject chapter11/ConvToObject.cpp)
 add_executable(ConvToPrimitive chapter11/ConvToPrimitive.cpp)
+add_executable(String chapter12/String.cpp)
